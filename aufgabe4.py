@@ -66,6 +66,3 @@ held1.fight(monster1)
 monster1.fight(held1)
 held1.fight(monster1)
 monster1.fight(held1)
-
-
-
