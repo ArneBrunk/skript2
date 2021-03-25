@@ -4,15 +4,17 @@ class Hero ():
         self.level = 1
 
 class Mage (Hero):
-    max_mana = 100
-    current_mana = 100
+    def __init__ (self):
+        self.max_mana = 100
+        self.current_mana = 100
 
 class Bruiser (Hero):
     pass
 
 class Krieger(Bruiser):
-    max_rage = 100
-    current_rage = 0
+    def __init__ (self):
+        self.max_rage = 100
+        self.current_rage = 0
 
 class Waldläufer(Bruiser):
     pet = "Hausschwein"
@@ -27,3 +29,9 @@ zauberer1 = Zauberer("Gandalf")
 priester1 = Priester("Harald")
 krieger1 = Krieger("Joachim")
 waldläufer1 = Waldläufer("Klaus")
+
+from pprint import pprint
+print(vars(priester1))
+print(vars(krieger1))
+print(vars(zauberer1))
+print(vars(waldläufer1))
