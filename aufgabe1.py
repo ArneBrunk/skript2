@@ -4,20 +4,24 @@ class Hero ():
         self.level = 1
 
 class Mage (Hero):
-    def __init__ (self):
-        self.max_mana = 100
-        self.current_mana = 100
+    def __init__(self, name):
+        Hero.__init__(self, name)
+        self. __max_mana = 100
+        self.__current_mana = 100
 
 class Bruiser (Hero):
     pass
 
 class Krieger(Bruiser):
-    def __init__ (self):
-        self.max_rage = 100
-        self.current_rage = 0
+    def __init__(self, name):
+        Hero.__init__(self, name)
+        self.__max_rage = 100
+        self.__current_rage = 0
 
 class Waldläufer(Bruiser):
-    pet = "Hausschwein"
+    def __init__(self, name):
+        Hero.__init__(self, name)
+        self.__pet = "Hausschwein"
 
 class  Priester (Mage):
     pass
