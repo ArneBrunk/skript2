@@ -48,4 +48,3 @@ alien2.move()
 alien3 = Alien("Howard", up())
 alien3.move()
 alien3.move()
-
