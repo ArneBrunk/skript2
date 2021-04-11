@@ -19,6 +19,11 @@ class normal (IMove):
         alien.x += 5 
         print("%d,%d" %(alien.x, alien.y))
 
+class rueck (IMove):
+    def move(self, alien):
+        alien.x -= 5
+        print("%d,%d" %(alien.x, alien.y))
+
 class Alien ():
     def __init__(self, name, mode: IMove):
         self.name = name
@@ -40,4 +45,6 @@ alien1.move()
 alien1.move()
 alien1._mode = up()
 alien1.move()
+alien1.move()
+alien1._mode = rueck()
 alien1.move()
