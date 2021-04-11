@@ -3,34 +3,27 @@ class IScoring():
         raise NotImplementedError()
 
 class Hardcore(IScoring):
-    def __init__(self):
-        self.x = 5 
-        self.s = 10
-    def score(self):
-        points = 50*self.x - 5*self.s
+    def score(self, player):
+        points = 50*player.x - 5*player.s
         print(points)
 
 class Intermediate(IScoring):
-    def __init__(self):
-        self.x = 5 
-        self.s = 10
-    def score(self):
-        points = 60*self.x - 4*self.s
+    def score(self, player):
+        points = 60*player.x - 4*player.s
         print(points)
 class Kinder(IScoring):
-    def __init__(self):
-        self.x = 5 
-        self.s = 10
-    def score(self):
-        points = 80*self.x - 2*self.s
+    def score(self, player):
+        points = 80*player.x - 2*player.s
         print(points)
 
 class Player():
     def __init__(self, name, score: IScoring()):
         self.name = name
+        self.x = 5 
+        self.s = 10
         self._score = score
     def doAction(self):
-        self._score.score()
+        self._score.score(self)
 
 
 kind1 = Player("Markus", Kinder())
